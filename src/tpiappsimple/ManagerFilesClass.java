@@ -19,7 +19,7 @@ public class ManagerFilesClass {
                 //We got nameDocument,Terms and their frequencies. 
                 //We are already to push data to db.
                pc.LoadDataInDB(nameDocument,terms);
-               System.out.println("Document processed " + nameDocument + "..." + java.time.LocalDate.now()); 
+               System.out.println("Document processed " + nameDocument + "..." + java.time.LocalDateTime.now()); 
                
                //MoveFile To processedFiles.
                file.renameTo(new File("./processedFiles/" + file.getName()));
