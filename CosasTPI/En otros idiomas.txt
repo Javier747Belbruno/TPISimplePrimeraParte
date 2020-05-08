@@ -1,0 +1,86 @@
+Searching 593 files for "Language: German" (whole word)
+
+C:\Users\Javier\Documents\FACU 2020\DISENO DE LENGUAJE DE CONSULTA 4K4\TPI\DocumentosTP1\8gs3410.txt:
+   33  Edition: 10
+   34  
+   35: Language: German
+   36  
+   37  Character set encoding: iso-8859-1
+
+C:\Users\Javier\Documents\FACU 2020\DISENO DE LENGUAJE DE CONSULTA 4K4\TPI\DocumentosTP1\8lndp10.txt:
+   33  Edition: 10
+   34  
+   35: Language: German
+   36  
+   37  Character set encoding: iso-latin-1
+
+C:\Users\Javier\Documents\FACU 2020\DISENO DE LENGUAJE DE CONSULTA 4K4\TPI\DocumentosTP1\8rdsl10.txt:
+   34  Edition: 10
+   35  
+   36: Language: German
+   37  
+   38  Character set encoding: ISO-8859-1
+
+3 matches across 3 files
+
+
+Searching 593 files for "Language: Dutch" (whole word)
+
+C:\Users\Javier\Documents\FACU 2020\DISENO DE LENGUAJE DE CONSULTA 4K4\TPI\DocumentosTP1\7mynr10.txt:
+   32  Edition: 10
+   33  
+   34: Language: Dutch
+   35  
+   36  Character set encoding: ASCII
+
+1 match in 1 file
+
+
+Searching 593 files for "Language: French" (whole word)
+
+C:\Users\Javier\Documents\FACU 2020\DISENO DE LENGUAJE DE CONSULTA 4K4\TPI\DocumentosTP1\8lssm10u.txt:
+   33  Edition: 10
+   34  
+   35: Language: French
+   36  
+   37  Character set encoding: UTF-8
+
+C:\Users\Javier\Documents\FACU 2020\DISENO DE LENGUAJE DE CONSULTA 4K4\TPI\DocumentosTP1\handi10.txt:
+   32  Edition: 10
+   33  
+   34: Language: French
+   35  
+   36  Character set encoding: ISO-8859-1
+
+2 matches across 2 files
+
+
+Searching 593 files for "Language: Italian" (whole word)
+
+C:\Users\Javier\Documents\FACU 2020\DISENO DE LENGUAJE DE CONSULTA 4K4\TPI\DocumentosTP1\8clel10.txt:
+   32  Edition: 10
+   33  
+   34: Language: Italian
+   35  
+   36  Character set encoding: ISO-8859-1
+
+1 match in 1 file
+
+
+Searching 593 files for "Language: Spanish" (whole word)
+
+C:\Users\Javier\Documents\FACU 2020\DISENO DE LENGUAJE DE CONSULTA 4K4\TPI\DocumentosTP1\8cand10.txt:
+   34  Edition: 10
+   35  
+   36: Language: Spanish
+   37  
+   38  Character set encoding: ISO-Latin-1
+
+C:\Users\Javier\Documents\FACU 2020\DISENO DE LENGUAJE DE CONSULTA 4K4\TPI\DocumentosTP1\8va0910.txt:
+   34  Edition: 10
+   35  
+   36: Language: Spanish
+   37  
+   38  Character set encoding: Latin1
+
+2 matches across 2 files
