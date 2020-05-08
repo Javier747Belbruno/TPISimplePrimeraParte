@@ -9,16 +9,22 @@ public class ManagerFilesClass {
   
     public void ProcessFiles(File[] f){
         FileClass fc = new FileClass();
+        PersistenceClass pc = new PersistenceClass();
         for (File file : f) {
             
              try {
                HashMap<String,Integer> terms = fc.readFileAndReturnTerms(file.getCanonicalPath());
                String nameDocument = file.getName();
-               System.out.println("Document processed " + nameDocument + "...");
-                
+               
                 //We got nameDocument,Terms and their frequencies. 
                 //We are already to push data to db.
-                
+               pc.LoadDataInDB(nameDocument,terms);
+               System.out.println("Document processed " + nameDocument + "..." + java.time.LocalDate.now()); 
+               
+               //MoveFile To processedFiles.
+               file.renameTo(new File("./processedFiles/" + file.getName()));
+
+               
             } catch (IOException e) {
                 System.out.println(e.getMessage());
             }

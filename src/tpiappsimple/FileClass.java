@@ -89,7 +89,7 @@ private void CreateHashSetStopWords()
         hsSW.add(sw[i]);
     }
 }
-//Stop Words...a lot
+//Stop Words...It´ll be okey if reads this words from a file.
 private static String[] sw = {"a", "able", "about",
         "across", "after", "all", "almost", "also", "am", "among", "an",
         "and", "any", "are", "as", "at", "b", "be", "because", "been",
