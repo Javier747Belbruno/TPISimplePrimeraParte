@@ -25,7 +25,10 @@ import javax.persistence.Table;
     @NamedQuery(name = "Posting.findAll", query = "SELECT p FROM Posting p"),
     @NamedQuery(name = "Posting.findByIdDocumento", query = "SELECT p FROM Posting p WHERE p.postingPK.idDocumento = :idDocumento"),
     @NamedQuery(name = "Posting.findByIdTermino", query = "SELECT p FROM Posting p WHERE p.postingPK.idTermino = :idTermino"),
-    @NamedQuery(name = "Posting.findByFrecuencia", query = "SELECT p FROM Posting p WHERE p.frecuencia = :frecuencia")})
+    @NamedQuery(name = "Posting.findByFrecuencia", query = "SELECT p FROM Posting p WHERE p.frecuencia = :frecuencia"),
+    @NamedQuery(name = "Posting.countByIdTermino", query = "SELECT COUNT(p) FROM Posting p WHERE p.postingPK.idTermino = :idTermino"),
+    @NamedQuery(name = "Posting.findByIdTerminoOrderByFrecuencia", 
+            query = "SELECT p FROM Posting p WHERE p.postingPK.idTermino = :idTermino ORDER BY p.frecuencia DESC")})
 public class Posting implements Serializable,DalEntity {
 
     private static final long serialVersionUID = 1L;

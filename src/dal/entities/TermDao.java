@@ -28,4 +28,19 @@ public class TermDao extends DaoEclipseLink<Term, Integer>
         
         return null;
     }
+    
+    public Term retrieveTerm(String term)
+    {
+        List<Term> resp = entityManager.createNamedQuery("Term.findByPalabra")
+                .setParameter("palabra", term)
+                .getResultList();
+        if (resp.size() == 1) return resp.get(0);
+        
+        return null;
+    }
+    
+        
+    
+    
+    
 }

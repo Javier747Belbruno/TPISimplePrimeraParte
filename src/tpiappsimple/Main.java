@@ -4,12 +4,10 @@ import java.io.IOException;
 import java.util.Scanner;
 
 
-
-
 public class Main {
     
     static Scanner input = new Scanner(System.in);
-    
+    static InvertedIndexClass ii = new InvertedIndexClass();
     public static void main(String[] args)  {
 
 
@@ -27,9 +25,7 @@ public class Main {
             
            switch(option){
                case 1:
-                   System.out.println("Has seleccionado la opcion 1");
-                
-                   
+                   Query();
                    break;
                case 2:
                    LoadDocumentsAndIndex();
@@ -47,12 +43,25 @@ public class Main {
     }
     
     public static void Query(){
-        
+        try {
+        Scanner inputQuery = new Scanner(System.in).useDelimiter("\\n");
+        Scanner inputR = new Scanner(System.in);
+        QueryClass q = new QueryClass();
         System.out.println("Ingrese Consulta");
-        String query = input.next();
-        //Ask if HashTable vocabulary is not empty.     ELSE LOAD VOCABULARY.
-        //  Then CleanQuery/DivideQuery/DeleteStopsWordsQuery
+        String query = inputQuery.next();
         
+        System.out.println("Ingrese Cantidad de Documentos a Recuperar");
+        Integer r = inputR.nextInt();
+        
+        //Ask if HashTable vocabulary is empty, fill it   
+        if(ii.IsEmpty())
+            ii.doFillVocabulary();
+        
+        q.processQuery(query,r);
+        //show Documents.
+        } catch (Exception e) {
+            System.out.println("Error " + e.getMessage());
+        }
     }
     
      
@@ -69,9 +78,10 @@ public class Main {
             if(number==0){
                 mf.ProcessFiles(f);}
             //Then Update HashTable vocabulary.
+                ii.doFillVocabulary();
         } catch (IOException e) {
             System.out.println(e.getMessage());
-        }  
+        }
     }
     
 }

@@ -5,6 +5,7 @@ import dal.entities.*;
 import entities.*;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -12,12 +13,12 @@ import javax.persistence.Persistence;
 
 public class PersistenceClass {
     
-    protected static EntityManagerFactory emf =
+protected static EntityManagerFactory emf =
     Persistence.createEntityManagerFactory("Eclipse");
-    public static EntityManager entityManagerGlobal = emf.createEntityManager();
+public static EntityManager entityManagerGlobal = emf.createEntityManager();
     
     
-    public void LoadDataInDB(String nameDocument,HashMap<String,Integer> terms){
+public void LoadDataInDB(String nameDocument,HashMap<String,Integer> terms){
     
     Document d = new Document(nameDocument);    
     DocumentDao ddao = new DocumentDao();
@@ -41,5 +42,42 @@ public class PersistenceClass {
         PostingDao pdao = new PostingDao();
         pdao.create(p);
         }
+    }
+    
+    public List<Posting> getAllPosting(){
+    PostingDao pdao = new PostingDao();
+    return pdao.findAll();
+    }
+    
+    public Term getTerm(String term){
+    TermDao tdao = new TermDao();
+    return tdao.retrieveTerm(term);
+    }
+    
+    
+    public Long getAmountDocuments(){
+    DocumentDao ddao= new DocumentDao();
+    return ddao.getAmountDocuments();
+    }
+    
+    
+    public Document getDocument(Integer DocumentID){
+    DocumentDao ddao = new DocumentDao();
+    return ddao.retrieve(DocumentID);
+    }
+    
+    public List<Term> getAllTerms(){
+    TermDao tdao = new TermDao();
+    return tdao.findAll();
+    }
+    
+    public Long getAmountDocumentsByTerm(Integer termID){
+    PostingDao pdao= new PostingDao();
+    return pdao.getAmountDocumentsByTerm(termID);
+    }
+    
+    public List<Posting> getAllPostingByTerm(Integer termID){
+    PostingDao pdao = new PostingDao();
+    return pdao.retrievePostingList(termID);
     }
 }

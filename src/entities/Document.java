@@ -26,7 +26,8 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(name = "Document.findAll", query = "SELECT d FROM Document d"),
     @NamedQuery(name = "Document.findByIdDocumento", query = "SELECT d FROM Document d WHERE d.idDocumento = :idDocumento"),
-    @NamedQuery(name = "Document.findByNombre", query = "SELECT d FROM Document d WHERE d.nombre = :nombre")})
+    @NamedQuery(name = "Document.findByNombre", query = "SELECT d FROM Document d WHERE d.nombre = :nombre"),
+    @NamedQuery(name = "Document.getCount", query = "SELECT COUNT(d) FROM Document d")})
 public class Document implements Serializable,DalEntity {
 
     private static final long serialVersionUID = 1L;
