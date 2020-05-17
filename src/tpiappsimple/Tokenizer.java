@@ -33,7 +33,7 @@ public class Tokenizer {
   * Second: Prepares for split token adding a comma between each word.*/ 
     private String ClearToken(String s) {
     String cleanToken = s;
-   for (char ch: "@#$%^?;&*=`():<>~\"][!".toCharArray()) {
+   for (char ch: "@#$%^?;&*=`():<>~\"][!".toCharArray()) {
        cleanToken =  cleanToken.replace (Character.toString(ch),"");
     }
    for (char ch: ".'-/\\_".toCharArray()) {
